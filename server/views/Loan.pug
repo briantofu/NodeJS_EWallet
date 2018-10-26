@@ -1,0 +1,29 @@
+html
+  head
+  body
+    header
+      meta(charset='utf-8')
+      meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+      base(href='/')
+      link(rel='stylesheet', href='/bootstrap.min.css')
+      link(rel='stylesheet', href='/index.css')
+    .jumbotron(id='#jumbotron')
+      h1.display-4(align='center') Online Loan
+      hr.my-4
+      .container
+        label(style='margin-left:40%;', for='#') Enter your amount to loan: 
+        .input-group-prepend(style='margin-left:40%;')
+          .input-group-text PHP
+          input#loanAmount.form-control(type='text', placeholder='Amount...')
+        br
+        label(style='margin-left:40%;', for='#') Enter your interest: 
+        .input-group-prepend
+          .input-group-text(style='margin-left:40%;') %
+          input#interest.form-control(type='text', placeholder='Interest...')
+        br
+        br
+        center
+          a.btn.btn-primary.btn-lg(href='#', role='button') Confirm
+          a.btn.btn-primary.btn-lg(href='#', role='button') Clear
+          a.btn.btn-primary.btn-lg(href='http://localhost:8080/home', role='button') Back to home
+      script(src='/bootstrap.min.js')

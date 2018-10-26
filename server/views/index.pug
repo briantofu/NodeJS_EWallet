@@ -1,0 +1,164 @@
+html
+  head
+  body
+    header
+      meta(charset='utf-8')
+      meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+      base(href='/')
+      link(rel='stylesheet', href='/bootstrap.min.css')
+      link(rel='stylesheet', href='/index.css')
+      script(src='/jquery.min.js')
+    div
+      .jumbotron(id='#jumbotron')
+        h1.display-4(align='center') Wallet Account
+        p.lead(align='center') Demo application for E-Wallet Functions
+        hr.my-4
+        center
+          a.btn.btn-primary.btn-lg(href='#', role='button', data-toggle='modal', data-target='#fundTransModal') Fund Transfer
+          a.btn.btn-primary.btn-lg(href='#', role='button', data-toggle='modal', data-target='#depositModal') Deposit
+          a.btn.btn-primary.btn-lg(href='#', role='button', data-toggle='modal', data-target='#withdrawModal') Withdraw
+          a.btn.btn-primary.btn-lg(href='#', role='button', data-toggle='modal', data-target='#balanceInqModal') Balance Inquiry
+          br
+          a#load.btn.btn-primary.btn-lg(href='#', role='button', data-toggle='modal', data-target='#loadModal') Load your sim...
+          a#loan.btn.btn-primary.btn-lg(href='/loan', role='button') You can have a loan here..
+          a#bills.btn.btn-primary.btn-lg(href='billsPayment', role='button') Pay your bills here...
+      // For Withdraw
+      #withdrawModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenterTitle', aria-hidden='true')
+        .modal-dialog.modal-dialog-centered(role='document')
+          .modal-content
+            .modal-header
+              h5#exampleModalCenterTitle.modal-title Withdraw
+              button.close(type='button', data-dismiss='modal', aria-label='Close')
+                span(aria-hidden='true') ×
+            .modal-body
+              form.col-12
+                .form-group
+                  label(for='#') Input Amount
+                  .input-group-prepend
+                    .input-group-text PHP
+                    input.form-control(type='text', id='#', placeholder='Amount...')
+                .btn-group
+                  button.btn.btn-primary(type='button') Confirm
+                  button.btn.btn-primary(type='button') Clear
+            .modal-footer
+              h6 Note: Enter amount in PHP!.
+      // For Deposit
+      #depositModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenterTitle', aria-hidden='true')
+        .modal-dialog.modal-dialog-centered(role='document')
+          .modal-content
+            .modal-header
+              h5#exampleModalCenterTitle.modal-title Deposit
+              button.close(type='button', data-dismiss='modal', aria-label='Close')
+                span(aria-hidden='true') ×
+            .modal-body
+              form.col-12
+                .form-group
+                  label(for='#') Input Amount
+                  .input-group-prepend
+                    .input-group-text PHP
+                    input.form-control(type='text', id='#', placeholder='Amount...')
+                .btn-group
+                  button.btn.btn-primary(type='button') Confirm
+                  button.btn.btn-primary(type='button') Clear
+            .modal-footer
+              h6 Note: Enter amount in PHP!.
+      // For Fund Transfer
+      #fundTransModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenterTitle', aria-hidden='true')
+        .modal-dialog.modal-dialog-centered(role='document')
+          .modal-content
+            .modal-header
+              h5#exampleModalCenterTitle.modal-title Transfer Your Fund:
+              button.close(type='button', data-dismiss='modal', aria-label='Close')
+                span(aria-hidden='true') ×
+            .modal-body
+              form.col-12
+                .form-group
+                  label(for='#') Amount
+                  .input-group-prepend
+                    .input-group-text PHP
+                    input.form-control(type='text', id='#', placeholder='Amount...')
+                .form-group
+                  label(for='#') Account to transfer
+                  .input-group-prepend
+                    .input-group-text ID
+                    input.form-control(type='text', id='#', placeholder='ID...')
+                .btn-group
+                  button.btn.btn-primary(type='button') Confirm
+                  button.btn.btn-primary(type='button') Clear
+            .modal-footer
+              h6 Note: Enter amount in PHP!
+      // For Balance Inquiry
+      #balanceInqModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenterTitle', aria-hidden='true')
+        .modal-dialog.modal-dialog-centered(role='document')
+          .modal-content
+            .modal-header
+              h5#exampleModalCenterTitle.modal-title Balance Inquiry
+              button.close(type='button', data-dismiss='modal', aria-label='Close')
+                span(aria-hidden='true') ×
+            .modal-body
+              form.col-12
+                .form-group
+                  label(for='#') Your available balance is: 
+                  .input-group-prepend
+                    .input-group-text PHP
+                    input.form-control(type='text', id='#', readonly='')
+                center
+                  .btn-group
+                    button.btn.btn-primary(type='button', data-dismiss='modal') Close
+            .modal-footer
+              h6 Note: Enter amount in PHP!
+    // Table for Transaction History
+    div(style='margin: 10%;margin-top: 0%;')
+      h3 Transaction History
+      table.table
+        thead.bg-primary.text-white
+          tr
+            th(scope='col') ID
+            th(scope='col') Name
+            th(scope='col') Type of Transaction
+            th(scope='col') Date
+        tbody
+          tr
+            th(scope='row') 1
+            td Brian Nebres
+            td Deposit
+            td 10/26/2018
+          tr
+            th(scope='row') 2
+            td Issac
+            td Withdraw
+            td 10/27/3018
+          tr
+            th(scope='row') 3
+            td Bruce
+            td Fund Transfer
+            td 12/12/2012
+    // For Load
+    #loadModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenterTitle', aria-hidden='true')
+      .modal-dialog.modal-dialog-centered(role='document')
+        .modal-content
+          .modal-header
+            h5#exampleModalCenterTitle.modal-title Load
+            button.close(type='button', data-dismiss='modal', aria-label='Close')
+              span(aria-hidden='true') ×
+          .modal-body
+            form.col-12
+              .form-group
+                label(for='#') Enter your load amount: 
+                .input-group-prepend
+                  .input-group-text PHP
+                  input.form-control(type='text', id='#', placeholder='Amount...')
+              .form-group
+                label(for='#') Enter your number: 
+                .input-group-prepend
+                  .input-group-text #
+                  input.form-control(type='text', id='#', placeholder='Number...')
+              .btn-group
+                button.btn.btn-primary(type='button') Confirm
+                button.btn.btn-primary(type='button') Clear
+          .modal-footer
+            h6 Note: Enter amount in PHP!
+    script(src='/bootstrap.min.js')
+    script(text='javaScript').
+      $('.modal').on('hidden.bs.modal', function(){
+      $(this).find('form')[0].reset();});

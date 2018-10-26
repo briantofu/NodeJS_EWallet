@@ -1,0 +1,27 @@
+.btn-primary{
+ margin: 15px;
+ width: 180px;
+}
+#bills{
+    width: 250px;
+}
+#loan{
+    width:270px;
+}
+#load{
+    width:200px;
+}
+.card {
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+}
+#loanAmount{
+    width: 200px;
+}
+#interest{
+    width: 200px;
+}
+body {
+    height: 100%
+}
